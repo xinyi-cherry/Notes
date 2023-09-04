@@ -39,7 +39,7 @@ $$p_\delta(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$
 ### 内插公式：
 
 内插公式： 
-$$ y(t) = \sum_{n=-\infty}^{\infty}x_a(nT)\frac{\sin{\frac{\pi}{T}(t-nT)}}{\frac{\pi}{T}(t-nT)}=x_a(t) $$
+$$y(t) = \sum_{n=-\infty}^{\infty}x_a(nT)\frac{\sin{\frac{\pi}{T}(t-nT)}}{\frac{\pi}{T}(t-nT)}=x_a(t)$$
 
 内插公式表明只要满足采样定理，就可以用采样值$x_a(nT)$来表示原信号而不发生损失，只需要将每个时刻的采样值乘以内插函数 $\frac{\sin{\frac{\pi}{T}(t-nT)}}{\frac{\pi}{T}(t-nT)}$ 即可。其用`sinc`函数对原始信号进行还原。
 
