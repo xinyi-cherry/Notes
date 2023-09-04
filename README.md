@@ -5,3 +5,4 @@ Notes for classes in 2023-2024-1.
 - 通信原理
 - 模拟通信电路与系统
 - 信息论与编码
+ test
