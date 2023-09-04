@@ -26,7 +26,7 @@ $$p_\delta(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$
 
 --------------------------
 若 $\Omega_s/2<\Omega_h$ 时，此时频谱将发生重叠
-![](image-1.png)
+![image-1.png](https://image.kanosaikou.cn/i/2023/09/03/64f46f5da5bb2.png)
 频谱发生失真，采样后的信号不能恢复成原始信号。
 
 ### 折叠频率与奈奎斯特频率
