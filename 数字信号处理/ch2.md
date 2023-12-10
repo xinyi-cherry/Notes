@@ -4,12 +4,11 @@
 
 ### 理想冲激取样
 
-理想冲激取样即用理想冲激取样信号 
-$$p_\delta(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$ 
+理想冲激取样即用理想冲激取样信号
+$$p_\delta(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$
 对信号进行取样，对连续信号 $x(t)$ 取样可得 $x(t)' = x(t)\delta(t-nT)$
 
 ### 采样定理
-
 
 采样定理是数字信号处理中的重要原理，它说明了若要能从采样信号恢复到原始信号，所需要的最小频率。其表述如下：
 
@@ -19,7 +18,7 @@ $$p_\delta(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$
 
 **示意图：**
 
-![](https://image.kanosaikou.cn/i/2023/09/03/64f46f5d14f01.png)
+![Alt text](image.png)
 
 从上至下分别为原始频谱，采样脉冲，采样后频谱
 当 $\Omega_s/2>\Omega_h$ 时，采样后的频谱相互错开，此时只需要对其进行低通滤波即可还原得到原始频谱。
@@ -28,23 +27,21 @@ $$p_\delta(t) = \sum_{n=-\infty}^{\infty} \delta(t-nT)$$
 --------------------------
 若 $\Omega_s/2<\Omega_h$ 时，此时频谱将发生重叠
 
-![image-1.png](https://image.kanosaikou.cn/i/2023/09/03/64f46f5da5bb2.png)
+![Alt text](image-1.png)
 
 频谱发生失真，采样后的信号不能恢复成原始信号。
 
 ### 折叠频率与奈奎斯特频率
 
-折叠频率 $\Omega_0 = \Omega_s/2$ 
+折叠频率 $\Omega_0 = \Omega_s/2$
 
 信号中的最高频率 $\Omega_h$ 称为奈奎斯特(Nyquist)频率。
 
+### 内插公式
 
-### 内插公式：
-
-内插公式： 
+内插公式：
 $$y(t) = \sum_{n=-\infty}^{\infty}x_a(nT)\frac{\sin{\frac{\pi}{T}(t-nT)}}{\frac{\pi}{T}(t-nT)}=x_a(t)$$
 
 内插公式表明只要满足采样定理，就可以用采样值$x_a(nT)$来表示原信号而不发生损失，只需要将每个时刻的采样值乘以内插函数 $\frac{\sin{\frac{\pi}{T}(t-nT)}}{\frac{\pi}{T}(t-nT)}$ 即可。其用`sinc`函数对原始信号进行还原。
 
 因此对于频谱未发生重合的采样信号，只需要让其通过 $\Omega_s/2$ 的低通滤波器，即可将其还原成为原信号。
-
