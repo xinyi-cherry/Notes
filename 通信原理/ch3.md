@@ -6,7 +6,7 @@
 
 $$ f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{(x-a)^2}{2\sigma^2}) $$
 
-其中 $ a $ 为均值, $ \sigma^2 $ 为方差
+其中 $a$ 为均值, $\sigma^2$ 为方差
 
 **正态分布函数**
 
@@ -26,7 +26,7 @@ $$ erfc(x) = 1-erf(x) $$
 
 $$ F(x) =  1-\frac12erfc(\frac{x-a}{\sqrt{2}\sigma}) $$
 
-当 $ x>2 $ 时
+当 $x>2$ 时
 
 $$ erfc(x)\approx\frac{1}{x\sqrt{\pi}}e^{-x^2} $$
 
@@ -34,7 +34,7 @@ $$ erfc(x)\approx\frac{1}{x\sqrt{\pi}}e^{-x^2} $$
 
 $$ Q(x) = \frac{1}{\sqrt{2\pi}}\int^\infty_xe^{-t^2/2} $$
 
-即正态分布概率密度函数从 $ x $到无穷的积分,因此可以得到
+即正态分布概率密度函数从 $x$到无穷的积分,因此可以得到
 
 $$ F(x)=1-Q(\frac{x-a}{\sigma}) $$ 
 
@@ -48,7 +48,7 @@ $$ f(x;\sigma) = \frac{x}{\sigma^2}e^{-x^2/2\sigma^2},x\geq0 $$
 
 $$ f(x|v,\sigma)=\frac{x}{\sigma^2}\exp(\frac{-(x^2+v^2)}{2\sigma^2})I_0(\frac{xv}{\sigma^2}) $$
 
-其中 $ I_0(z) $ 是修正的第一类零阶贝塞尔函数,当 $ v=0 $ 时莱斯分布退化为瑞利分布.
+其中 $I_0(z)$ 是修正的第一类零阶贝塞尔函数,当 $v=0$ 时莱斯分布退化为瑞利分布.
 
 ## 随机过程
 
@@ -74,18 +74,18 @@ $$ R(t_1,t_2)=E[\xi(t_1)\xi(t_2)] $$
 
 $$ =\int^\infty_{-\infty}\int^\infty_{-\infty}x_1x_2f_2(x_1,x_2;t_1,t_2)dx_1dx_2 $$
 
-平稳过程中,其自相关函数仅与 $ \tau=t_2-t_1 $ 有关,因此可以记为 $ R(\tau) $
+平稳过程中,其自相关函数仅与 $\tau=t_2-t_1$ 有关,因此可以记为 $R(\tau)$
 
 其具有以下性质
-$ \xi(t) $ 的平均功率
+$\xi(t)$ 的平均功率
 
 $$ R(0) = E[\xi^2(t)] $$
 
-$ \xi(t) $ 的直流功率
+$\xi(t)$ 的直流功率
 
 $$ R(\infty) = E^2[\xi(t)] = a^2 $$
 
-$ \xi(t) $ 的交流功率
+$\xi(t)$ 的交流功率
 
 $$ R(0) - R(\infty) = \sigma^2 $$
 
@@ -115,29 +115,30 @@ $$ R(0) = \int^\infty_{-\infty}P_\xi(f)df $$
 
 $$ \xi_o(t) = \int^\infty_{-\infty}h(\tau)\xi_i(t-\tau)d\tau $$
 
-假设 $ \xi_i(t) $ 的均值为 $ a $ , 自相关函数为 $ R_i(\tau) $ ,功率谱密度为 $ P_i(\omega) $ 则有
+假设 $\xi_i(t)$ 的均值为 $a$ , 自相关函数为 $R_i(\tau)$ ,功率谱密度为 $P_i(\omega)$ 则有
 
 $$ E[\xi_o(t)] = a $$
 
 $$ P_o(f) = |H(f)|^2P_i(f) $$
 
-可通过 $ P_o(f) $ 的反傅里叶变换求得 $ R(\tau) $
+可通过 $P_o(f)$ 的反傅里叶变换求得 $R(\tau)$
 
 **窄带随机过程**
-随机过程的谱密度集中在中心频率 $ f_c $ 附近相对窄的频率范围 $ \Delta f $ 内
+
+随机过程的谱密度集中在中心频率 $f_c$ 附近相对窄的频率范围 $\Delta f$ 内
 
 可表示为
 
 $$ \xi(t) = a_\xi(t)\cos[\omega_ct+\varphi_\xi(t)] $$
 
-其中 $ a_\xi(t) $ 为随机包络, $ \varphi_\xi(t) $ 为随机相位, $ \omega_c $ 为中心角频率
+其中 $a_\xi(t)$ 为随机包络, $\varphi_\xi(t)$ 为随机相位, $\omega_c$ 为中心角频率
 ![ch3](image.png)
 
 将表达式展开可以得到
 
 $$ \xi(t) = \xi_c(t)\cos\omega_ct - \xi_s(t)\sin\omega_ct $$
 
-其中 $ \xi_c(t)=a_\xi(t)\cos\varphi_\xi(t) $ 为同相分量, $ \xi_s(t)=a_\xi(t)\sin\varphi_\xi(t) $ 为正交分量,且均为平稳的,具有相同的平均功率和方差(自相关函数相同)
+其中 $\xi_c(t)=a_\xi(t)\cos\varphi_\xi(t)$ 为同相分量, $\xi_s(t)=a_\xi(t)\sin\varphi_\xi(t)$ 为正交分量,且均为平稳的,具有相同的平均功率和方差(自相关函数相同)
 
 **正弦波加窄带高斯噪声**
 
